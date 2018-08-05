@@ -1,3 +1,15 @@
+body{
+  background-color: #5987a5;
+}
+
+h1, h2, h3{
+  color: #f4f2f2;
+}
+
+p{
+  color: black;
+}
+
 .tt-query,
 .tt-hint {
   width: 396px;
@@ -56,3 +68,4 @@
 .tt-suggestion p {
   margin: 0;
 }
+
