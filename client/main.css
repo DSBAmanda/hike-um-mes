@@ -2,8 +2,30 @@ body{
   background-color: #5987a5;
 }
 
+.contato{
+  padding-bottom: 50px;
+  padding-left: 50px;
+}
+
+.col-md-12{
+  padding: 20px;
+}
+
 h1, h2, h3, h5, h6{
-  color: #f4f2f2;
+  color: #e6e6e6;
+  font-family: "Lucida Console", sans-serif, monospace;
+}
+
+a:link {
+    color: #f2f2f2;
+}
+
+a:visited {
+  color:#f2f2f2;
+}
+
+p{
+  font-family: "Lucida Console", sans-serif, monospace;
 }
 
 .tt-query,
