@@ -1,5 +1,7 @@
 body{
   background-color: #5987a5;
+  padding-top: 100px;
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
 .contato{
@@ -90,3 +92,53 @@ p{
 .fa{
   font-size: 25px;
 }
+
+/*Style Navbar */ 
+ul.nav { 
+	margin: 0; 
+	padding: 0;
+	font-size: 18px;
+}
+	
+ul.nav li {
+	list-style: none;	
+	display: inline;
+	}
+	
+ul.nav li a:hover{
+	float: left;
+  color: white;
+	text-decoration:none;
+	font-size: 22px;
+  background-color: white
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-container {
+    padding: 10px 0 20px 0;
+}
+
+.navbar.navbar-fixed-top.fixed-theme {
+    background-color: #222;
+    border-color: #080808;
+}
+
+.navbar-brand.fixed-theme {
+    font-size: 24px;
+}
+
+.navbar-container.fixed-theme {
+    padding: 0;
+}
+
+.navbar-brand.fixed-theme,
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+    transition: 0.8s;
+}
+/* Style Navbar */

@@ -1,3 +1,7 @@
+Template.Post.onCreated(function() {
+  Meteor.subscribe("comentarios", this.data._id);
+});
+
 Template.Post.helpers({
   usernameDoAutor: function () {
     var idDoAutor = (this.idDoAutor);
@@ -27,11 +31,9 @@ Template.Post.helpers({
 
 Template.Post.events({
     "click .botao-curtir": function(evento, template) {
-     console.log("curtindo");
      Meteor.call("curtirPost", template.data._id);
     },
     "click .botao-descurtir": function(evento, template) {
-      console.log("descurtindo");
       Meteor.call("descurtirPost", template.data._id);
     },
     "click .botao-remover": function (evento, template) {
