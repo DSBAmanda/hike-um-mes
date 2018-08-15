@@ -9,58 +9,58 @@ $(document).ready(function(){
  */
 var myNavBar = {
 
-  flagAdd: true,
+    flagAdd: true,
 
-  elements: [],
+    elements: [],
 
-  init: function (elements) {
-    this.elements = elements;
-  },
+    init: function (elements) {
+        this.elements = elements;
+    },
 
-  add : function() {
-    if(this.flagAdd) {
-      for(var i=0; i < this.elements.length; i++) {
-        document.getElementById(this.elements[i]).Post += "fixed-theme";
-      }
-      this.flagAdd = false;
+    add : function() {
+        if(this.flagAdd) {
+            for(var i=0; i < this.elements.length; i++) {
+                document.getElementById(this.elements[i]).className += " fixed-theme";
+            }
+            this.flagAdd = false;
+        }
+    },
+
+    remove: function() {
+        for(var i=0; i < this.elements.length; i++) {
+            document.getElementById(this.elements[i]).className =
+                    document.getElementById(this.elements[i]).className.replace( /(?:^|\s)fixed-theme(?!\S)/g , '' );
+        }
+        this.flagAdd = true;
     }
-  },
-
-  remove: function() {
-    for(var i=0; i < this.elements.length; i++) {
-      document.getElementById(this.elements[i]).Post =
-        document.getElementById(this.elements[i]).Post.replace(navbar, "fixed-theme");
-    }
-    this.flagAdd = true;
-  }
 
 };
 
 /**
-* Init the object. Pass the object the array of elements
-* that we want to change when the scroll goes down
-*/
+ * Init the object. Pass the object the array of elements
+ * that we want to change when the scroll goes down
+ */
 myNavBar.init(  [
-  "header",
-  "header-container",
-  "brand"
+    "header",
+    "header-container",
+    "brand"
 ]);
 
 /**
-* Function that manage the direction
-* of the scroll
-*/
+ * Function that manage the direction
+ * of the scroll
+ */
 function offSetManager(){
 
-  var yOffset = 0;
-  var currYOffSet = window.pageYOffset;
+    var yOffset = 0;
+    var currYOffSet = window.pageYOffset;
 
-  if(yOffset < currYOffSet) {
-    myNavBar.add();
-  }
-  else if(currYOffSet == yOffset){
-    myNavBar.remove();
-  }
+    if(yOffset < currYOffSet) {
+        myNavBar.add();
+    }
+    else if(currYOffSet == yOffset){
+        myNavBar.remove();
+    }
 
 }
 
@@ -68,7 +68,7 @@ function offSetManager(){
  * bind to the document scroll detection
  */
 window.onscroll = function(e) {
-  offSetManager();
+    offSetManager();
 }
 
 /**
