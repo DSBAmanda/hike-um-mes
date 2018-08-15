@@ -30,6 +30,9 @@ p{
   font-family: "Lucida Console", sans-serif, monospace;
 }
 
+.panel-heading a{
+  color: black;
+}
 .tt-query,
 .tt-hint {
   width: 396px;

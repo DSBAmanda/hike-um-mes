@@ -34,3 +34,4 @@ Meteor.publish("usuarios", function() {
 Meteor.publish("comentarios", function(idDoPost) {
   return Comentarios.find({post: idDoPost});
 });
+
