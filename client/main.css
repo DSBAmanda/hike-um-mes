@@ -30,6 +30,11 @@ p{
   font-family: "Lucida Console", sans-serif, monospace;
 }
 
+.img-responsive{
+  height: 100%;
+  width: 100%;
+}
+
 .panel-heading a{
   color: black;
 }
